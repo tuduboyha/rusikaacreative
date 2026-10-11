@@ -25,7 +25,7 @@
       desc: 'Classic frames for prints, portraits and certificates — we can print and fit your photo too.',
       makes: ['Normal Photo Frames'],
       svg: '<rect x="3" y="3" width="18" height="18" rx="1"/><rect x="7" y="7" width="10" height="10"/>' },
-    led: { n: '05', bg: '#06285F', icon: '#FFC066', iconInk: '#06285F', shadow: '#C98A2B', ink: '#FFC066', dark: true,
+    led: { n: '05', bg: '#E3F0FD', icon: '#06285F', iconInk: '#FFC066', shadow: '#03163A', ink: '#0659AE',
       desc: 'Glowing backlit frames that light up your memories — a gift that stands out on any shelf or desk.',
       makes: ['LED Photo Frames'],
       svg: '<rect x="5" y="5" width="14" height="14" rx="1"/><rect x="8.5" y="8.5" width="7" height="7"/><path d="M12 1v2M12 21v2M1 12h2M21 12h2"/>' },
@@ -53,7 +53,7 @@
       desc: 'Certificates and mementos for schools, offices and events — a keepsake people hold on to.',
       makes: ['Mementos', 'Certificates'],
       svg: '<circle cx="12" cy="15" r="5"/><path d="M8 3l4 7 4-7M12 13v4"/>' },
-    merch: { n: '12', bg: '#E60070', icon: '#FFFFFF', iconInk: '#E60070', shadow: '#9E004D', ink: '#FFFFFF', dark: true,
+    merch: { n: '12', bg: '#FFE1EE', icon: '#E60070', iconInk: '#FFFFFF', shadow: '#9E004D', ink: '#B0005A',
       desc: 'Stickers and branded items that put your business name in people\'s hands.',
       makes: ['Sticker Printing', 'Pamphlets & Flyers', 'Flex & Banner Printing'],
       svg: '<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/>' }
