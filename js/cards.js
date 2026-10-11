@@ -25,7 +25,7 @@
       desc: 'Classic frames for prints, portraits and certificates — we can print and fit your photo too.',
       makes: ['Normal Photo Frames'],
       svg: '<rect x="3" y="3" width="18" height="18" rx="1"/><rect x="7" y="7" width="10" height="10"/>' },
-    led: { n: '05', bg: '#06285F', icon: '#FFC066', iconInk: '#06285F', shadow: '#FFC066', ink: '#FFC066', dark: true,
+    led: { n: '05', bg: '#06285F', icon: '#FFC066', iconInk: '#06285F', shadow: '#C98A2B', ink: '#FFC066', dark: true,
       desc: 'Glowing backlit frames that light up your memories — a gift that stands out on any shelf or desk.',
       makes: ['LED Photo Frames'],
       svg: '<rect x="5" y="5" width="14" height="14" rx="1"/><rect x="8.5" y="8.5" width="7" height="7"/><path d="M12 1v2M12 21v2M1 12h2M21 12h2"/>' },
