@@ -1155,3 +1155,9 @@ body.cat-all #allBody { padding-top: 34px; }
 }
 .gal-st { display: table; margin-bottom: 10px; }
 .gal-rows { -webkit-mask-image: none; mask-image: none; }
+
+/* hero: remove the orange glow that turned dark/muddy at the bottom-left */
+.hero { background: radial-gradient(rgba(255, 255, 255, .09) 1.4px, transparent 1.6px) 0 0 / 22px 22px, linear-gradient(135deg, #1665D8 0%, #1665D8 100%); }
+
+/* hero: bright blue gradient, no dark corner */
+.hero { background: radial-gradient(rgba(255, 255, 255, .1) 1.4px, transparent 1.6px) 0 0 / 22px 22px, linear-gradient(120deg, #1456C8 0%, #1E78EA 50%, #4AA8FF 100%); }
