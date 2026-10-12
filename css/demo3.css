@@ -1173,3 +1173,14 @@ body.cat-all #allBody { padding-top: 34px; }
 @media (max-width: 1100px) { #categories #cats { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (max-width: 800px) { #categories #cats { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 560px) { #categories #cats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 10px; } #categories #cats .cat .ic { width: 72px; height: 72px; } }
+
+/* everything straight: no tilted cards, photos, panels or chips */
+.list.grid.home .card, .res .list.grid .card, .list.grid.home .card:nth-child(n), .res .list.grid .card:nth-child(n) { transform: none; --rot: 0deg; }
+.list.grid.home .card:hover, .res .list.grid .card:hover { transform: translateY(-6px); }
+.t-faq, .t-enq, .pd-main, .makes, .cta-band, #profile .profile .panel, #profile .mapbox, .dz-stage, .collage .c1, .collage .c2, .collage .c3,
+.hero .trend .chip:nth-of-type(odd), .hero .trend .chip:nth-of-type(even), .chico, .sv-ic, .di, .side h3, .tsticker, .gal-st, .hcopy::before { transform: none; }
+.hero .trend .chip:hover { transform: translateY(-2px); }
+.svc .sv:hover .sv-ic { transform: scale(1.06); }
+@media (min-width: 1001px) { .t-faq, .t-enq { transform: none; } }
+.sticker, .tape, #profile .di, #profile .here, .hcopy::before, .collage::after, .collage figure::before, .pd-card::before, .pd-card::after, .cta-band::before, .gal-st, .tsticker, .side h3, .hero .trend .chip, .dz-live { transform: none !important; }
+.hd h2::after, .pd-sec h2::after, .chtxt h1::after, #related .hd h2::after { transform: none !important; }
