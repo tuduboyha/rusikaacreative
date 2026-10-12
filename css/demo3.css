@@ -1199,3 +1199,7 @@ body.cat-all #cats .cat::after { width: 22px; height: 22px; }
 
 /* space between the last section and the footer on category and product pages */
 body.cat-page main > section:last-of-type, body.pd-page main > section:last-of-type { padding-bottom: clamp(48px, 6vw, 72px) !important; }
+
+/* FAQs, How it works and the enquiry form share the same white card background */
+.t-faq, .t-how, .t-enq { background: #fff; border: 1px solid var(--line); }
+.t-enq .tape { background: rgba(255, 193, 59, .7); }
