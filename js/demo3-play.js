@@ -24,8 +24,8 @@
     Rectangle: { d: 'M42 44H118a14 14 0 0 1 14 14V126a14 14 0 0 1-14 14H42a14 14 0 0 1-14-14V58a14 14 0 0 1 14-14Z', hole: 58, ty: 100, w: 84 }
   };
   var FRAME_LAYOUTS = {
-    Portrait: { body: [38, 14, 84, 118], photo: [48, 24, 64, 84], ty: 120, stand: 'M62 130L80 150L98 130Z', sun: [64, 46, 6], hill: 'M48 108V88L66 70L82 86L92 78L112 96V108Z', w: 74 },
-    Landscape: { body: [18, 34, 124, 92], photo: [28, 44, 104, 56], ty: 113, stand: 'M62 124L80 146L98 124Z', sun: [46, 58, 5], hill: 'M28 100V82L48 62L66 82L80 70L132 86V100Z', w: 114 }
+    Portrait: { body: [38, 14, 84, 118], photo: [48, 24, 64, 84], ty: 120, stand: 'M72 130L67 145L93 145L88 130Z', sun: [64, 46, 6], hill: 'M48 108V88L66 70L82 86L92 78L112 96V108Z', w: 74 },
+    Landscape: { body: [18, 34, 124, 92], photo: [28, 44, 104, 56], ty: 113, stand: 'M72 124L67 141L93 141L88 124Z', sun: [46, 58, 5], hill: 'M28 100V82L48 62L66 82L80 70L132 86V100Z', w: 114 }
   };
   var CLOCK_SHAPES = {
     Round: 'M16 80a64 64 0 1 0 128 0a64 64 0 1 0-128 0Z',
@@ -122,6 +122,13 @@
     r.setAttribute('x', bb.x - 3); r.setAttribute('y', bb.y - 1.5); r.setAttribute('width', bb.width + 6); r.setAttribute('height', bb.height + 3);
   }
 
+  // darker / lighter versions of a hex colour, for acrylic edges and shading
+  function shade(hex, f) {
+    var n = parseInt(hex.slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255;
+    function m(v) { return Math.max(0, Math.min(255, Math.round(f < 0 ? v * (1 + f) : v + (255 - v) * f))); }
+    return 'rgb(' + m(r) + ',' + m(g) + ',' + m(b) + ')';
+  }
+
   function draw(p, c, shown) {
     var el = $(p.text), ph0 = !!st.photo;
     if (p.id === 'tshirt') {
@@ -131,9 +138,9 @@
       setText(el, shown, ph0 ? 50 : 54, ph0 ? 9 : 15, c.ink);
     } else if (p.id === 'keyring') {
       var k = KEY_SHAPES[st.opt];
-      $('kBody').setAttribute('d', k.d);
-      $('kClipP').setAttribute('d', k.d);
+      ['kBody', 'kClipP', 'kEdge', 'kTint', 'kRim'].forEach(function (id) { $(id).setAttribute('d', k.d); });
       $('kBody').setAttribute('fill', c.hex);
+      $('kEdge').setAttribute('fill', shade(c.hex, -0.38));
       showImg('kImg', true);
       $('kHole').setAttribute('cy', k.hole);
       $('kRing').setAttribute('cy', k.hole - 14);
@@ -143,11 +150,11 @@
       pill('kPill', el, ph0 && !!shown);
     } else if (p.id === 'frame') {
       var f = FRAME_LAYOUTS[st.opt], b = f.body, ph = f.photo;
-      $('fBody').setAttribute('x', b[0]); $('fBody').setAttribute('y', b[1]); $('fBody').setAttribute('width', b[2]); $('fBody').setAttribute('height', b[3]);
+      ['fBody', 'fEdge', 'fBodyClipR'].forEach(function (id) { ['x', 'y', 'width', 'height'].forEach(function (a, i) { $(id).setAttribute(a, b[i]); }); });
       $('fBody').setAttribute('fill', c.hex);
+      $('fEdge').setAttribute('fill', shade(c.hex, -0.38));
       $('fStand').setAttribute('d', f.stand);
-      $('fPhoto').setAttribute('x', ph[0]); $('fPhoto').setAttribute('y', ph[1]); $('fPhoto').setAttribute('width', ph[2]); $('fPhoto').setAttribute('height', ph[3]);
-      ['x', 'y', 'width', 'height'].forEach(function (a, i) { $('fClipR').setAttribute(a, ph[i]); $('fImg').setAttribute(a, ph[i]); });
+      ['fPhoto', 'fClipR', 'fImg', 'fInner'].forEach(function (id) { ['x', 'y', 'width', 'height'].forEach(function (a, i) { $(id).setAttribute(a, ph[i]); }); });
       $('fSun').setAttribute('cx', f.sun[0]); $('fSun').setAttribute('cy', f.sun[1]); $('fSun').setAttribute('r', f.sun[2]);
       $('fHill').setAttribute('d', f.hill);
       $('fIcon').style.display = ph0 ? 'none' : '';
@@ -155,13 +162,13 @@
       el.setAttribute('y', f.ty);
       setText(el, shown, f.w, 9, c.ink);
     } else {
-      $('cBody').setAttribute('d', CLOCK_SHAPES[st.opt]);
-      $('cClipP').setAttribute('d', CLOCK_SHAPES[st.opt]);
+      var cd = CLOCK_SHAPES[st.opt];
+      ['cBody', 'cClipP', 'cEdge', 'cFace', 'cRim', 'cShadow'].forEach(function (id) { $(id).setAttribute('d', cd); });
       $('cBody').setAttribute('fill', c.hex);
+      $('cEdge').setAttribute('fill', shade(c.hex, -0.38));
       showImg('cImg', true);
       $('cTicks').setAttribute('stroke', c.ink);
-      $('gClock').querySelectorAll('path[stroke-linecap]').forEach(function (h) { h.setAttribute('stroke', c.ink); });
-      $('cBody').setAttribute('stroke', c.hex === '#FFFFFF' ? DARK : c.ink);
+      $('gClock').querySelectorAll('.hand').forEach(function (h) { h.setAttribute('stroke', c.ink); });
       setText(el, shown, 56, 11, ph0 ? DARK : c.ink);
       pill('cPill', el, ph0 && !!shown);
     }
