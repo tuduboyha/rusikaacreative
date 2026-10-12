@@ -92,140 +92,52 @@
   </section>
 
   <!-- ===== design your own T-shirt (live) ===== -->
-  <section class="sec" id="design" aria-labelledby="dzH">
+  <section class="sec" id="design" aria-labelledby="ofH">
     <div class="wrap">
-      <div class="dz">
-        <div class="dz-copy">
-          <span class="sticker">Try it live</span>
-          <h2 id="dzH">Design your own T-shirt</h2>
-          <p class="dz-sub">Type a name, pick a colour and a style. We make it after you approve the preview.</p>
-          <form id="dzForm" autocomplete="off">
-            <fieldset class="dz-group dz-tabs"><legend>What do you want to design?</legend><div class="dz-chips" id="dzProducts"></div></fieldset>
-            <div class="dz-field">
-              <label for="dzText">What should it say? (optional)</label>
-              <input id="dzText" type="text" maxlength="18" placeholder="e.g. TEAM RUSIKAA">
+      <div class="of-head">
+        <h2 id="ofH">Offers</h2>
+        <p>Ask us on WhatsApp for today's offer details.</p>
+      </div>
+      <div class="oqs">
+        <article class="oq" style="--c: #E5007D">
+          <div class="oq-ph"><img src="images/p1.jpg" alt="" loading="lazy"><span class="oq-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8zM7.5 7.5h.01"/></svg>Bulk orders</span></div>
+          <div class="oq-perf" aria-hidden="true"></div>
+          <div class="oq-b">
+            <h3>Custom T-shirts for your team</h3>
+            <p>Ask for the best price on bulk orders.</p>
+            <div class="oq-act">
+              <a class="oq-wa" href="https://wa.me/917033560221?text=Hi%20Rusikaa%20Creative%2C%20I%20want%20to%20know%20about%20your%20bulk%20T-shirt%20offer." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 19z"></path><path d="M9 9.5c.3 2 2.2 4.2 4.5 4.8l1.2-1.2 1.8.8"></path></svg> Claim on WhatsApp</a>
+              <a class="oq-call" href="tel:+917033560221" aria-label="Call 70335 60221"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg> Call</a>
             </div>
-            <div class="dz-field dz-photo">
-              <label for="dzPhoto">Add your photo (optional)</label>
-              <div class="dz-photo-row">
-                <input id="dzPhoto" type="file" accept="image/*">
-                <button type="button" class="dz-clear" id="dzPhotoClear" hidden>Remove photo</button>
-              </div>
-              <p class="dz-photo-note">The photo only appears in this preview, on your device. It is not uploaded. To order, send the same photo in the WhatsApp chat.</p>
-            </div>
-            <fieldset class="dz-group"><legend><span id="dzColourLabel">Colour</span>: <b id="dzColourName">White</b></legend><div class="dz-sw" id="dzColours"></div></fieldset>
-            <fieldset class="dz-group"><legend>Style</legend><div class="dz-chips" id="dzStyles"></div></fieldset>
-            <fieldset class="dz-group"><legend id="dzSizeLabel">Size</legend><div class="dz-chips" id="dzSizes"></div></fieldset>
-          </form>
-          <div class="dz-act">
-            <a class="btn btn-call" href="tel:+917033560221"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg>Call</a>
-            <a class="btn btn-wa-solid" id="dzWa" href="https://wa.me/917033560221" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 19z"></path><path d="M9 9.5c.3 2 2.2 4.2 4.5 4.8l1.2-1.2 1.8.8"></path></svg>Order this design</a>
           </div>
-          <p class="dz-note">Nothing is sent until you press send in WhatsApp. Add your photo or logo in the same chat.</p>
-        </div>
-
-        <div class="dz-stage">
-          <span class="dz-live"><i aria-hidden="true"></i>Live preview</span>
-          <svg id="dzShirt" viewBox="0 0 160 160" role="img" aria-label="Preview of your T-shirt">
-            <defs>
-              <clipPath id="sClip"><rect x="54" y="60" width="52" height="42" rx="2"/></clipPath>
-              <clipPath id="sBodyClip"><path d="M58 22L34 32Q26 36 22 46L12 68Q10 72 14 74L34 84Q38 86 40 82L43 74L43 140Q43 146 49 146L111 146Q117 146 117 140L117 74L120 82Q122 86 126 84L146 74Q150 72 148 68L138 46Q134 36 126 32L102 22Q80 44 58 22Z"/></clipPath>
-              <clipPath id="kClip"><path id="kClipP" d=""/></clipPath>
-              <clipPath id="fClip"><rect id="fClipR" x="48" y="24" width="64" height="84"/></clipPath>
-              <clipPath id="fBodyClip"><rect id="fBodyClipR" x="38" y="14" width="84" height="118" rx="6"/></clipPath>
-              <clipPath id="cClip"><path id="cClipP" d=""/></clipPath>
-              <filter id="softShadow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="3"/></filter>
-              <filter id="cloth" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="4"/><feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  .5 0 0 0 -.14"/></filter>
-              <filter id="inkWear" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="1.3" numOctaves="2" seed="9" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.4 2.05" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in"/></filter>
-              <linearGradient id="gShade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".24"/></linearGradient>
-              <linearGradient id="gEdgeL" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".2"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>
-              <linearGradient id="gEdgeR" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".2"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>
-              <linearGradient id="gMetal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7F9FC"/><stop offset=".45" stop-color="#8B95A8"/><stop offset="1" stop-color="#DCE1E9"/></linearGradient>
-              <linearGradient id="gAcr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".6"/><stop offset=".35" stop-color="#fff" stop-opacity=".1"/><stop offset=".7" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".2"/></linearGradient>
-              <linearGradient id="gGlare" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".42"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-              <radialGradient id="gFace" cx=".38" cy=".3" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".16"/></radialGradient>
-            </defs>
-
-            <g id="gShirt">
-              <ellipse cx="80" cy="154" rx="44" ry="4.500" fill="#000" opacity=".22" filter="url(#softShadow)"/>
-              <path d="M80 28V17Q80 10 87 10Q93 10 93 16M80 26L36 44Q31 46 36 48L124 48Q129 46 124 44Z" fill="none" stroke="#8D95A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <g transform="translate(0 8)">
-                <path id="dzBody" d="M58 22L34 32Q26 36 22 46L12 68Q10 72 14 74L34 84Q38 86 40 82L43 74L43 140Q43 146 49 146L111 146Q117 146 117 140L117 74L120 82Q122 86 126 84L146 74Q150 72 148 68L138 46Q134 36 126 32L102 22Q80 44 58 22Z" fill="#FFFFFF" stroke="#1E2A4A" stroke-opacity=".4" stroke-width="1" stroke-linejoin="round"/>
-                <g clip-path="url(#sBodyClip)">
-                  <rect x="0" y="0" width="160" height="160" fill="url(#gShade)"/>
-                  <rect x="0" y="0" width="160" height="160" filter="url(#cloth)" opacity=".3"/>
-                  <rect x="43" y="70" width="16" height="80" fill="url(#gEdgeL)"/>
-                  <rect x="101" y="70" width="16" height="80" fill="url(#gEdgeR)"/>
-                  <path d="M12 60L40 80L43 74L34 32Z" fill="#000" opacity=".07"/>
-                  <path d="M148 60L120 80L117 74L126 32Z" fill="#000" opacity=".1"/>
-                  <path d="M58 22Q80 44 102 22Q80 30 58 22Z" fill="#000" opacity=".22"/>
-                  <path d="M58 22Q80 44 102 22" fill="none" stroke="#000" stroke-opacity=".25" stroke-width="3.600"/>
-                  <path d="M60 24.500Q80 41 100 24.500" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="1"/>
-                  <path d="M58 22Q50 50 43 74M102 22Q110 50 117 74" fill="none" stroke="#000" stroke-opacity=".16" stroke-width="1"/>
-                  <path d="M17 66.500L38 77.500M143 66.500L122 77.500M43 138L117 138" fill="none" stroke="#000" stroke-opacity=".22" stroke-width=".9" stroke-dasharray="2 1.500"/>
-                  <path d="M46 98Q60 104 50 126M114 94Q104 108 112 128M70 124Q80 130 94 120" fill="none" stroke="#000" stroke-opacity=".09" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M52 92Q64 96 56 112M106 90Q98 100 104 114" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="2" stroke-linecap="round"/>
-                </g>
-                <rect x="52" y="64" width="56" height="52" rx="3" fill="none" stroke="#1E2A4A" stroke-width=".8" stroke-dasharray="3 3" opacity=".25"/>
-                <g filter="url(#inkWear)">
-                  <image id="sImg" x="54" y="60" width="52" height="42" preserveAspectRatio="xMidYMid slice" clip-path="url(#sClip)" style="display: none"/>
-                  <text id="dzPrint" x="80" y="94" text-anchor="middle" dominant-baseline="middle" font-family="Inter, sans-serif" font-weight="800" font-size="13" fill="#1E2A4A"></text>
-                </g>
-              </g>
-            </g>
-
-            <g id="gKey">
-              <ellipse id="kShadow" cx="84" cy="152" rx="46" ry="5" fill="#000" opacity=".24" filter="url(#softShadow)"/>
-              <circle id="kRing" cx="80" cy="30" r="14" fill="none" stroke="url(#gMetal)" stroke-width="3.600"/>
-              <path id="kEdge" d="" fill="#888" stroke="none" transform="translate(0 3.500)"/>
-              <path id="kBody" d="" fill="#DDEFFB" fill-opacity=".94" stroke="#1E2A4A" stroke-opacity=".35" stroke-width="1.200" stroke-linejoin="round"/>
-              <image id="kImg" x="20" y="36" width="120" height="116" preserveAspectRatio="xMidYMid slice" clip-path="url(#kClip)" style="display: none"/>
-              <path id="kTint" d="" fill="url(#gAcr)" stroke="none"/>
-              <path id="kRim" d="" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="5" clip-path="url(#kClip)"/>
-              <path id="kShine" d="M42 70c4-14 14-22 28-26" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".75"/>
-              <circle id="kHole" cx="80" cy="52" r="4.500" fill="#EEF1F6" stroke="#1E2A4A" stroke-opacity=".5" stroke-width="1.400"/>
-              <rect id="kPill" rx="4" fill="#fff" fill-opacity=".85" style="display: none"/>
-              <text id="kText" x="80" y="96" text-anchor="middle" dominant-baseline="middle" font-family="Inter, sans-serif" font-weight="800" font-size="13" fill="#1E2A4A"></text>
-            </g>
-
-            <g id="gFrame">
-              <ellipse cx="80" cy="146" rx="50" ry="4.500" fill="#000" opacity=".26" filter="url(#softShadow)"/>
-              <path id="fStand" d="" fill="#9AA3B5" stroke="#1E2A4A" stroke-opacity=".4" stroke-width="1" stroke-linejoin="round"/>
-              <rect id="fEdge" x="38" y="14" width="84" height="118" rx="6" fill="#888" transform="translate(0 3.500)"/>
-              <rect id="fBody" x="38" y="14" width="84" height="118" rx="6" fill="#EAF4FB" fill-opacity=".96" stroke="#1E2A4A" stroke-opacity=".35" stroke-width="1.200"/>
-              <rect id="fPhoto" x="48" y="24" width="64" height="84" rx="2" fill="#DCE6F5" stroke="#1E2A4A" stroke-opacity=".5" stroke-width="1"/>
-              <g id="fIcon" fill="#9FB3D3"><circle id="fSun" cx="64" cy="48" r="6"/><path id="fHill" d="M48 108V86l16-16 14 14 10-8 24 20v12z"/></g>
-              <image id="fImg" x="48" y="24" width="64" height="84" preserveAspectRatio="xMidYMid slice" clip-path="url(#fClip)" style="display: none"/>
-              <rect id="fInner" x="48" y="24" width="64" height="84" rx="2" fill="none" stroke="#000" stroke-opacity=".28" stroke-width="2" clip-path="url(#fClip)"/>
-              <path d="M-20 70L110 -20L170 -20L170 14L0 130Z" fill="url(#gGlare)" clip-path="url(#fBodyClip)" opacity=".8"/>
-              <text id="fText" x="80" y="120" text-anchor="middle" dominant-baseline="middle" font-family="Inter, sans-serif" font-weight="800" font-size="10" fill="#1E2A4A"></text>
-            </g>
-
-            <g id="gClock">
-              <path id="cShadow" d="" fill="#000" opacity=".26" filter="url(#softShadow)" transform="translate(3 7)"/>
-              <path id="cEdge" d="" fill="#888" transform="translate(0 3.500)"/>
-              <path id="cBody" d="" fill="#FFFFFF" stroke="#1E2A4A" stroke-opacity=".4" stroke-width="1.200" stroke-linejoin="round"/>
-              <image id="cImg" x="10" y="10" width="140" height="140" preserveAspectRatio="xMidYMid slice" clip-path="url(#cClip)" opacity=".6" style="display: none"/>
-              <path id="cFace" d="" fill="url(#gFace)" stroke="none"/>
-              <path id="cRim" d="" fill="none" stroke="#000" stroke-opacity=".12" stroke-width="5" clip-path="url(#cClip)"/>
-              <g id="cTicks" stroke="#1E2A4A" stroke-linecap="round"></g>
-              <g id="cHands" stroke-linecap="round" fill="none">
-                <path d="M81.500 82L61.500 70M81.500 82L114 64" stroke="#000" stroke-opacity=".25" stroke-width="3.600"/>
-                <path class="hand" d="M80 80L60 68" stroke="#1E2A4A" stroke-width="4.200"/>
-                <path class="hand" d="M80 80L112 62" stroke="#1E2A4A" stroke-width="3"/>
-                <path d="M80 90L87 38" stroke="#E5007D" stroke-width="1.200"/>
-              </g>
-              <circle cx="80" cy="80" r="5" fill="url(#gMetal)" stroke="#1E2A4A" stroke-opacity=".4" stroke-width=".8"/>
-              <rect id="cPill" rx="4" fill="#fff" fill-opacity=".85" style="display: none"/>
-              <text id="cText" x="80" y="110" text-anchor="middle" dominant-baseline="middle" font-family="Inter, sans-serif" font-weight="800" font-size="10" fill="#1E2A4A"></text>
-              <path d="M30 40Q44 20 76 16Q52 28 40 52Z" fill="#fff" opacity=".4" clip-path="url(#cClip)"/>
-            </g>
-          </svg>
-          <p class="dz-cap" id="dzCap">White T-shirt, size M</p>
-        </div>
+        </article>
+        <article class="oq" style="--c: #1665D8">
+          <div class="oq-ph"><img src="images/p3.jpg" alt="" loading="lazy"><span class="oq-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8zM7.5 7.5h.01"/></svg>Festival</span></div>
+          <div class="oq-perf" aria-hidden="true"></div>
+          <div class="oq-b">
+            <h3>LED photo frames and gifts</h3>
+            <p>Seasonal offers on gifts. Order early.</p>
+            <div class="oq-act">
+              <a class="oq-wa" href="https://wa.me/917033560221?text=Hi%20Rusikaa%20Creative%2C%20I%20want%20to%20know%20about%20your%20festival%20offers." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 19z"></path><path d="M9 9.5c.3 2 2.2 4.2 4.5 4.8l1.2-1.2 1.8.8"></path></svg> Claim on WhatsApp</a>
+              <a class="oq-call" href="tel:+917033560221" aria-label="Call 70335 60221"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg> Call</a>
+            </div>
+          </div>
+        </article>
+        <article class="oq" style="--c: #0E9F5A">
+          <div class="oq-ph"><img src="images/p5.jpg" alt="" loading="lazy"><span class="oq-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8zM7.5 7.5h.01"/></svg>Weddings</span></div>
+          <div class="oq-perf" aria-hidden="true"></div>
+          <div class="oq-b">
+            <h3>Wedding invitation cards</h3>
+            <p>Ask what we can offer for your function.</p>
+            <div class="oq-act">
+              <a class="oq-wa" href="https://wa.me/917033560221?text=Hi%20Rusikaa%20Creative%2C%20I%20want%20to%20know%20about%20your%20wedding%20card%20offers." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 19z"></path><path d="M9 9.5c.3 2 2.2 4.2 4.5 4.8l1.2-1.2 1.8.8"></path></svg> Claim on WhatsApp</a>
+              <a class="oq-call" href="tel:+917033560221" aria-label="Call 70335 60221"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg> Call</a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
-    </section>
+  </section>
 
   <!-- ===== running ribbon ===== -->
   <div class="ribbon" aria-hidden="true">
@@ -365,7 +277,6 @@
 <script src="js/cards.js"></script>
 <script src="js/demo3-search.js"></script>
 <script src="js/demo3.js"></script>
-<script src="js/demo3-play.js"></script>
 <script src="js/demo3-gallery.js"></script>
 <script src="js/faq-smooth.js"></script>
 <script src="js/back-to-top.js"></script>

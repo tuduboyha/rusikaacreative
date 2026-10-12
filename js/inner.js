@@ -52,7 +52,7 @@
   if ($('steps')) {
     var STEPS = [
       { c: '#E5007D', title: 'Tell us what you need', text: 'Message us on WhatsApp, call us or drop by the shop. You can also tap WhatsApp on any product.', link: ['Contact us', 'contact.html'] },
-      { c: '#7137C8', title: 'Share your photo, logo or idea', text: 'Send your photo, logo or reference design in the same WhatsApp chat, along with any text, size, colour and quantity. No design? We will create one for you.', link: ['Try the live designer', 'index.html#design'] },
+      { c: '#7137C8', title: 'Share your photo, logo or idea', text: 'Send your photo, logo or reference design in the same WhatsApp chat, along with any text, size, colour and quantity. No design? We will create one for you.', link: ['Contact us', 'contact.html'] },
       { c: '#1665D8', title: 'Get a design preview and price', text: 'We reply with a design preview and the price. Prices depend on the item, size, quantity and design, so you always know the cost before going ahead.', link: ['Our services', 'services.html'] },
       { c: '#FF8A00', title: 'Approve the design', text: 'Check the spelling, colours and layout carefully. Ask for changes if you need them. We print only after you approve.', link: ['Read our terms', 'terms.html'] },
       { c: '#0E9F5A', title: 'We make it', text: 'Once approved, we print and prepare your order. Every product is made to order, just for you.', link: ['See what we make', 'category.html'] },

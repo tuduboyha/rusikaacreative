@@ -1355,3 +1355,33 @@ body.cat-page main > section:last-of-type, body.pd-page main > section:last-of-t
 
 /* top strip: only the page links, on the right */
 .util .wrap { justify-content: flex-end; }
+
+/* Offers: photo coupon cards (photo on top, perforated edge, claim button below) */
+#design { background: linear-gradient(180deg, #EEF4FF 0, #FFF8EC 110px, #FFF8EC 100%); padding-block: clamp(44px, 6vw, 72px); }
+#design::before, #design::after { display: none; }
+.of-head h2 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; color: var(--ink); }
+.of-head p { margin-top: 6px; color: var(--muted); font-size: 1.05rem; }
+.oqs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 26px; }
+.oq { position: relative; display: flex; flex-direction: column; background: #fff; border-radius: 18px; box-shadow: 0 10px 26px rgba(16, 24, 40, .08); overflow: hidden; }
+.oq-ph { position: relative; aspect-ratio: 16 / 10; background: #14213D; }
+.oq-ph img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.oq:hover .oq-ph img { transform: scale(1.05); }
+.oq-tag { position: absolute; top: 14px; left: 0; display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px 6px 12px; border-radius: 0 99px 99px 0; background: var(--c); color: #fff; font-weight: 800; font-size: 13px; }
+.oq-tag svg { width: 15px; height: 15px; }
+.oq-perf { position: relative; height: 0; border-top: 2px dashed #D5DCEA; margin: 0 16px; }
+.oq-perf::before, .oq-perf::after { content: ""; position: absolute; top: -13px; width: 24px; height: 24px; border-radius: 50%; background: #FFF8EC; }
+.oq-perf::before { left: -28px; }
+.oq-perf::after { right: -28px; }
+.oq-b { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px 18px; flex: 1; }
+.oq-b h3 { font-size: 20px; font-weight: 800; line-height: 1.2; }
+.oq-b p { color: #3C4658; font-size: 14.5px; }
+.oq-act { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 10px; }
+.oq-wa, .oq-call { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 99px; font-weight: 800; font-size: 14px; text-decoration: none; }
+.oq-wa { flex: 1 1 auto; background: #0E9F5A; color: #fff; }
+.oq-wa:hover { background: #0B7A44; }
+.oq-call { background: #fff; color: var(--c); border: 1.5px solid var(--c); }
+.oq-call:hover { background: var(--c); color: #fff; }
+.oq svg { width: 18px; height: 18px; }
+@media (max-width: 900px) { .oqs { grid-template-columns: minmax(0, 1fr); } }
+.oq-ph { overflow: hidden; aspect-ratio: auto; height: 0; padding-bottom: 62.5%; }
+.oq-ph img { position: absolute; inset: 0; }
