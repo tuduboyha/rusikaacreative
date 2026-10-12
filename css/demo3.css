@@ -1184,3 +1184,15 @@ body.cat-all #allBody { padding-top: 34px; }
 @media (min-width: 1001px) { .t-faq, .t-enq { transform: none; } }
 .sticker, .tape, #profile .di, #profile .here, .hcopy::before, .collage::after, .collage figure::before, .pd-card::before, .pd-card::after, .cta-band::before, .gal-st, .tsticker, .side h3, .hero .trend .chip, .dz-live { transform: none !important; }
 .hd h2::after, .pd-sec h2::after, .chtxt h1::after, #related .hd h2::after { transform: none !important; }
+
+/* all categories page: 6 per row on desktop, same compact tiles as the home page */
+body.cat-all #cats { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px 14px; }
+body.cat-all #cats .cat { padding: 16px 8px 12px; gap: 8px; box-shadow: 5px 5px 0 color-mix(in srgb, var(--tc) 28%, transparent); }
+body.cat-all #cats .cat .ic { width: 76px; height: 76px; }
+body.cat-all #cats .cat .ic svg { width: 52px; height: 52px; }
+body.cat-all #cats .cat .nm { font-size: 14px; line-height: 1.25; }
+body.cat-all #cats .cat small { font-size: 11.5px; }
+body.cat-all #cats .cat::after { width: 22px; height: 22px; }
+@media (max-width: 1100px) { body.cat-all #cats { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 800px) { body.cat-all #cats { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { body.cat-all #cats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 10px; } body.cat-all #cats .cat .ic { width: 72px; height: 72px; } }
