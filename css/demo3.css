@@ -1196,3 +1196,6 @@ body.cat-all #cats .cat::after { width: 22px; height: 22px; }
 @media (max-width: 1100px) { body.cat-all #cats { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (max-width: 800px) { body.cat-all #cats { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 560px) { body.cat-all #cats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 10px; } body.cat-all #cats .cat .ic { width: 72px; height: 72px; } }
+
+/* space between the last section and the footer on category and product pages */
+body.cat-page main > section:last-of-type, body.pd-page main > section:last-of-type { padding-bottom: clamp(48px, 6vw, 72px) !important; }
